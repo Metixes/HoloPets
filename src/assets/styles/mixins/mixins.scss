@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: red;
+  background-color: $white;
   & > svg {
     margin-left: 5px;
     width: 21px;
@@ -136,5 +136,5 @@
 
 //INPUT
 @mixin form-input-subscribe{
-  
+
 }
