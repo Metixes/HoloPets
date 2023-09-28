@@ -1,0 +1,52 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container{
+    background-color: $black;
+}
+
+.wrapper{
+   @include wrapper;
+}
+
+.holoPet{
+    padding-top: 76px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+
+    &_img{
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+    &_info{
+        max-width: 529px;
+        &_title{
+            @include text-h2;
+            margin-bottom: 33px;
+        }
+        &_text{
+            @include text-page;
+            margin-bottom: 20px;
+        }
+        &_subText{
+            @include text-page;
+        }
+        &_links{
+            margin-top: 52px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        } 
+        &_link{
+            border-radius: 8px;
+            box-shadow: 0px 3px 33px 0px $box-shadow-links;
+            cursor: pointer;
+        } 
+    }
+}

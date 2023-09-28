@@ -1,0 +1,32 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.container {
+    background: #FCF5F500;
+    background: radial-gradient(circle farthest-corner at center center, #FCF5F500 0%, #F9F2F8 100%);
+}
+
+.wrapper {
+  @include wrapper;
+  padding: 19px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  &_logo {
+    & > img {
+      max-width: 129px;
+    }
+  }
+  &_navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &_btn {
+      @include nav-btn;
+    }
+  }
+}

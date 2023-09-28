@@ -1,0 +1,118 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container{
+    background-color: $black;
+}
+
+.wrapper{
+   @include wrapper;
+}
+
+.latest{
+    position: relative;
+    padding: 121px 0;
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        &_title{
+            @include text-h2;
+        }
+        &_text{
+            @include text-page;
+        }
+    }
+}
+
+.carousel{
+    &_prevButton{
+        @include carousel-btn;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 24px);
+    }
+    &_nextButton{
+        @include carousel-btn;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 24px);
+    }
+
+    &_slide{
+        margin-top: 59px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center;
+        gap: 16px;
+    }
+    &_content{
+        max-width: 336px;
+
+        &_img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &_info{
+            padding: 30px 28px 36px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            background-color: $white;
+        }
+        &_postDate{
+            @include carousel-latest-postDate;
+            max-width: 103px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 0;
+            border-radius: 47px;
+            border: 0.5px solid $black-62;
+        }
+        &_title{
+            @include carousel-latest-title;
+        }
+        &_text{
+            @include text-page;
+            color: $black-def;
+        }
+        &_userInfo{
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+    }
+}
+
+.carousel{
+    :global{
+        .slick-dots{
+            display: flex !important;
+            gap: 4px;
+            bottom: -34px !important;
+    
+            & > li {
+                width: 8px !important;
+                height: 8px !important;
+                margin-inline: 0 !important;
+            }
+            & > li > button {
+                width: 8px !important;
+                height: 8px !important;
+                border-radius: 50% !important;
+            }
+        }
+        .slick-active > button{
+            background: $green !important;
+        }
+        .slick-dots > li > button{
+            background: $white;
+        } 
+    }
+}

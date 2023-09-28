@@ -1,0 +1,62 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container{
+    background-color: $black;
+    padding: 87px 0 97px;
+}
+
+.wrapper{
+   @include wrapper;
+   max-width: 1000px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 76px;
+
+    &_content{
+        &_img{
+            max-width: 426px;
+            & > img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &_info{
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 25px;
+        }
+        &_btn{
+            @include main-btn;
+            color: $white;
+            border-color: $white;
+        }
+        &_title{
+            @include text-h2;
+        }
+        &_text{
+            @include text-page;
+        }
+    }
+
+    &:last-child{
+        margin: 0 auto;
+        margin-top: 61px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 121px;
+
+        & .about_content_info{
+            gap: 29px;
+        }
+    }
+}

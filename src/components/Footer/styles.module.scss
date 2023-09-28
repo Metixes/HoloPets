@@ -1,0 +1,75 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.container{
+    border-bottom: 0.5px solid $gray;
+}
+
+.wrapper{
+   @include wrapper;
+}
+
+.footer {
+    padding: 80px 0 113px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    &_content{
+        max-width: 305px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        &:not(:first-child){
+            gap: 22px;
+        }
+        &:nth-child(2){
+            max-width: 279px;
+        }
+        &:nth-child(3){
+            max-width: 372px;
+        }
+        & > img{
+            max-width: 159px;
+        }
+        &_title{
+            @include text-h3;
+        }
+        &_text{
+            @include text-page;
+            color: $black-def;
+
+            &_email{
+                margin: 0 5px;
+                color: $black-def;
+                text-decoration: underline;
+            }
+        }
+        &_socialLinks{
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            &_link{
+                width: 24px;
+                height: 24px;
+
+                cursor: pointer;
+
+                &:nth-child(2){
+                    width: 22px;
+                    height: 22px;
+                }
+                &:nth-child(3){
+                    width: 25px;
+                    height: 21px;
+                }
+                &:nth-child(4){
+                    width: 22px;
+                    height: 21px;
+                }
+            }
+        }
+    }
+}

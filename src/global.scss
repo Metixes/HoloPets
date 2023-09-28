@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal Regular"), local("Neue-Montreal-Regular"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Regular.woff") format("woff"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal Medium"), local("Neue-Montreal-Medium"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Medium.woff2") format("woff2"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Medium.woff") format("woff"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal Bold"), local("Neue-Montreal-Bold"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Bold.woff") format("woff"),
+    url("../src/assets/fonts/NeueMontreal/NeueMontreal-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    
+    font-family: 'Neue Montreal', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+body{
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}

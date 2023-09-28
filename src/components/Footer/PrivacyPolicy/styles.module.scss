@@ -1,0 +1,46 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container{
+    
+}
+
+.wrapper{
+   @include wrapper;
+}
+
+.privacyPolicy {
+    padding: 22px 0 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_copy{
+        @include text-page;
+        color: $black-def;
+    }
+
+    &_links{
+
+        &_link{
+            @include text-page;
+            color: $black-def;
+
+            &:nth-child(1){
+                border-right: 1px solid $black-def;
+            }
+            &:nth-child(3){
+                border-left: 1px solid $black-def;
+            }
+            &:first-child{
+                padding-right: 5px;
+            }
+            &:last-child{
+                padding-left: 5px;
+            }
+            &:nth-child(2){
+                margin: 0 5px;
+            }
+        }
+    }
+}

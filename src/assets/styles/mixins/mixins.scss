@@ -1,0 +1,140 @@
+@import "../variables/variables.scss";
+
+@mixin wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (320px <= width <= 1270px) {
+    margin: 0 20px;
+  }
+  @media (320px <= width <= 768px) {
+    margin: 0 10px;
+  }
+}
+
+//TEXT
+@mixin text-h1 {
+  font-family: "Neue Montreal";
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+}
+@mixin text-h2 {
+  font-family: "Neue Montreal";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $white;
+}
+@mixin text-h3 {
+  font-family: "Neue Montreal";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $black-def;
+}
+@mixin text-nav {
+  font-family: "Neue Montreal";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $black-def;
+}
+@mixin text-virtual {
+  font-family: "Neue Montreal";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+@mixin text-page {
+  font-family: "Neue Montreal";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $white;
+}
+@mixin carousel-latest-title { 
+  font-family: 'Neue Montreal';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100.5%;
+  color: $black-def;
+}
+@mixin carousel-latest-postDate {  
+  font-family: 'Neue Montreal';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  color: $black-middle;
+}
+@mixin form-title-text {  
+  font-family: 'Neue Montreal';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: $white;
+  line-height: 100.5%;
+}
+
+//BUTTONS
+
+@mixin nav-btn {
+  padding: 12px 24px;
+
+  background-color: $green;
+  border-radius: 5px;
+
+  font-family: "Neue Montreal";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $white;
+}
+@mixin main-btn {
+  display: inline-flex;
+  padding: 10px 27px;
+
+  border: 0.5px solid $black-62;
+  background-color: transparent;
+  border-radius: 47px;
+
+  font-family: "Neue Montreal";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: $black-middle;
+}
+@mixin main-app-btn {
+  padding: 27px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: red;
+  & > svg {
+    margin-left: 5px;
+    width: 21px;
+    height: 23px;
+  }
+}
+@mixin carousel-btn {
+  padding: 11px;
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+  background-color: $green-dark;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $green;
+    transition: background-color 0.3s ease;
+  }
+}
+
+//INPUT
+@mixin form-input-subscribe{
+  
+}

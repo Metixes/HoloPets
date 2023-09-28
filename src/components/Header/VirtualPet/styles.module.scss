@@ -1,0 +1,71 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container {
+}
+.wrapper {
+  @include wrapper;
+}
+
+.virtual{
+    position: relative;
+    padding: 45px 0 139px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_bg{
+        position: absolute;
+        bottom: 100px;
+        right: 19px;
+        z-index: -1;
+    }
+
+    &_info{
+        &_btn{
+            @include main-btn;
+        }
+        &_title{
+            @include text-h1;
+            max-width: 519px;
+            margin-top: 20px;
+            margin-bottom: 24px;
+        }
+        &_text{
+            @include text-virtual;
+            max-width: 530px;
+            margin-bottom: 37px;
+        }
+        &_links{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            & > img{
+                max-width: 161px;
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_app{
+        position: relative;
+        padding-right: 67px;
+
+        &_img{
+            & > img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        &_btn{
+            @include main-app-btn;
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 78px);
+        }
+    }
+}
