@@ -67,7 +67,7 @@ export default function OurPets() {
               variableWidth={true}
             >
               {slides.map(item => (
-                <div className={styles.slide_Wrapper}>
+                <div key={item.title} className={styles.slide_Wrapper}>
                   <div className={styles.slide_content}>
                     <img
                       className={styles.slide_content_img}

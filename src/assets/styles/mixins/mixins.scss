@@ -53,32 +53,46 @@
   line-height: 26px;
   color: $white;
 }
-@mixin carousel-latest-title { 
-  font-family: 'Neue Montreal';
+@mixin carousel-latest-title {
+  font-family: "Neue Montreal";
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 100.5%;
   color: $black-def;
 }
-@mixin carousel-latest-postDate {  
-  font-family: 'Neue Montreal';
+@mixin carousel-latest-postDate {
+  font-family: "Neue Montreal";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   color: $black-middle;
 }
-@mixin form-title-text {  
+@mixin steps-title-text {
   font-family: 'Neue Montreal';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100.5%;
+  color: $black-def;
+}
+@mixin form-title-text {
+  font-family: "Neue Montreal";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   color: $white;
   line-height: 100.5%;
 }
+@mixin form-input-text {
+  font-family: "Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 26px;
+  color: $black-dark;
+}
 
 //BUTTONS
-
 @mixin nav-btn {
   padding: 12px 24px;
 
@@ -133,8 +147,27 @@
     transition: background-color 0.3s ease;
   }
 }
+@mixin form-submit-btn {
+  padding: 16px 18px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: $green;
+  border: none;
+  font-family: 'Neue Montreal';
+  font-size: 14px;
+  font-style: normal;
+  line-height: 26px;
+  color: $black-dark;
+  cursor: pointer;
+}
 
 //INPUT
-@mixin form-input-subscribe{
-
+@mixin form-input-subscribe {
+  @include form-input-text;
+  max-width: 324px;
+  width: 100%;
+  padding: 16px 18px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  background: $white;
 }
