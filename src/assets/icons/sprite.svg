@@ -74,7 +74,7 @@
             d="M22.1446 12.7414L22.1446 14.8225L7.8747 14.8225L14.2664 21.2142L12.78 22.7006L3.8613 13.782L12.78 4.86329L14.2664 6.34973L7.8747 12.7414L22.1446 12.7414Z"
             fill="white" />
     </symbol>
-    <symbol viewBox="0 0 25 25" id="radio-active" fill="#FFF">
+    <symbol viewBox="0 0 25 25" id="radioActive" fill="#FFF">
         <circle cx="12.5" cy="12.5" r="12" stroke="#3CD174" />
         <circle cx="12.5" cy="12.5" r="6.5" fill="#3CD174" />
     </symbol>

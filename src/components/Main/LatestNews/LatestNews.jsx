@@ -50,7 +50,7 @@ export default function LatestNews() {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="News" className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.latest}>
           <div className={styles.latest_info}>
@@ -70,8 +70,8 @@ export default function LatestNews() {
               >
               
                 {slides.map((item) => (
-                  <div className={styles.carousel_slide}>
-                    <div key={crypto.randomUUID()} className={styles.carousel_content}>
+                  <div key={crypto.randomUUID()} className={styles.carousel_slide}>
+                    <div className={styles.carousel_content}>
                       <img
                         className={styles.carousel_content_img}
                         src={item.img}

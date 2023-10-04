@@ -20,7 +20,7 @@ export default function VirtualPet() {
         <div className={styles.virtual}>
           <div className={styles.virtual_info}>
             <a className={styles.virtual_info_btn} href="">
-              START PLAYING NOW
+              Coming in 2024
             </a>
             <h1 className={styles.virtual_info_title}>
               Your Virtual Pet, Now in Reality.

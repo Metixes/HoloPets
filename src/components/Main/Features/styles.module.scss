@@ -12,12 +12,7 @@
 .features{
     min-width: 0;
     padding-top: 130px;
-    // background-color: red;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // gap: 61px;
+    text-align: center;
 
     &_title{
         @include text-h2;
@@ -34,7 +29,6 @@
         display: flex;
         flex-direction: column;
         gap: 33px;
-        border-left: 1px solid $gray-middle;
 
         &_content{
             position: relative;
@@ -75,6 +69,7 @@
     position: absolute !important;
     top: -5px;
     right: 75px;
+    // border-image: url(../../../assets/images/main/features/phone.png) 32 !important;
     &_slide{
         max-width: 282px;
     }
@@ -104,6 +99,47 @@
         }
         .slick-dots > li > button{
             background: $black-light;
+        }
+    }
+}
+
+.steps{
+    :global{
+        .ant-steps-item-title{
+            @include steps-title-text;
+        }
+        .ant-steps-item-description{
+            @include text-page;
+            max-width: 459px;
+            color: $black-def;
+        }
+        .ant-steps-item-container:hover{
+            
+            .ant-steps-item-title{
+                color: inherit !important;
+            }
+            .ant-steps-item-description{
+                color: inherit !important;
+            }
+        }
+        .ant-steps-icon > svg{
+            width: 25px;
+            height: 25px;
+        }
+        // .ant-steps-item-active{
+        //     .ant-steps-icon > svg{
+        //         stroke: $green !important;
+        //         fill: $green !important;
+        //    }
+        // }
+        .ant-steps-item-finish{
+           .ant-steps-item-tail::after{
+            background-color: $green !important;
+           }
+        //    .ant-steps-icon > svg{
+        //         stroke: $green !important;
+        //         fill: $green !important;
+        //    }
         }
     }
 }

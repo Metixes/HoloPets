@@ -34,7 +34,7 @@ export default function OurPets() {
   };
 
   return (
-    <section className={styles.container}>
+    <section id="Pets" className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.latest}>
           <div className={styles.latest_info}>

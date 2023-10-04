@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Carousel } from "antd";
+import { useStore } from '../../../store/store'
 import TimeLine from "./TimeLine";
 import phone from "../../../assets/images/main/features/phone.png";
 import dogImg from "../../../assets/images/main/features/dogImg.png";
@@ -16,13 +17,19 @@ const slides = [
 
 export default function Features() {
   const carouselRef = useRef();
-  const [active, setActive] = useState(0);
+  const setSlide = useStore(state => state.setSlide)
+  const currentSlide = useStore(state => state.currentSlide)
+
   const onChange = (currentSlide) => {
-    setActive(currentSlide);
+    setSlide(currentSlide)
   };
 
+  useEffect(() => {
+    carouselRef.current.goTo(currentSlide)
+  }, [currentSlide])
+
   return (
-    <section className={styles.container}>
+    <section id="Features" className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.features}>
           <h2 className={styles.features_title}>
@@ -30,76 +37,7 @@ export default function Features() {
           </h2>
           <div className={styles.features_description}>
             <div className={styles.features_steps}>
-              <div className={styles.features_steps_content}>
-                <h4 className={styles.features_steps_title}>
-                  Customizable Pets:
-                </h4>
-                <p className={styles.features_steps_text}>
-                  Choose from a variety of creatures, each with its own unique
-                  personality and characteristics. Customize their appearance,
-                  name them, and watch them grow and develop right before your
-                  eyes.
-                </p>
-                <svg>
-                  <use href={sprite + '#radio-active'}/>
-                </svg>
-              </div>
-              <div className={styles.features_steps_content}>
-                <h4 className={styles.features_steps_title}>
-                  Customizable Pets:
-                </h4>
-                <p className={styles.features_steps_text}>
-                  Choose from a variety of creatures, each with its own unique
-                  personality and characteristics. Customize their appearance,
-                  name them, and watch them grow and develop right before your
-                  eyes.
-                </p>
-                <svg>
-                  <use href={sprite + '#radio'}/>
-                </svg>
-              </div>
-              <div className={styles.features_steps_content}>
-                <h4 className={styles.features_steps_title}>
-                  Customizable Pets:
-                </h4>
-                <p className={styles.features_steps_text}>
-                  Choose from a variety of creatures, each with its own unique
-                  personality and characteristics. Customize their appearance,
-                  name them, and watch them grow and develop right before your
-                  eyes.
-                </p>
-                <svg>
-                  <use href={sprite + '#radio'}/>
-                </svg>
-              </div>
-              <div className={styles.features_steps_content}>
-                <h4 className={styles.features_steps_title}>
-                  Customizable Pets:
-                </h4>
-                <p className={styles.features_steps_text}>
-                  Choose from a variety of creatures, each with its own unique
-                  personality and characteristics. Customize their appearance,
-                  name them, and watch them grow and develop right before your
-                  eyes.
-                </p>
-                <svg>
-                  <use href={sprite + '#radio'}/>
-                </svg>
-              </div>
-              <div className={styles.features_steps_content}>
-                <h4 className={styles.features_steps_title}>
-                  Customizable Pets:
-                </h4>
-                <p className={styles.features_steps_text}>
-                  Choose from a variety of creatures, each with its own unique
-                  personality and characteristics. Customize their appearance,
-                  name them, and watch them grow and develop right before your
-                  eyes.
-                </p>
-                <svg>
-                  <use href={sprite + '#radio'}/>
-                </svg>
-              </div>
+              <TimeLine />
             </div>
             <div className={styles.features_phone}>
               <img

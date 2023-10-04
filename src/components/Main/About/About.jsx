@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 
 export default function About() {
   return (
-    <section className={styles.container}>
+    <section id='About' className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.about}>
           <PictureMediaQuery
