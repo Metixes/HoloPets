@@ -9,6 +9,10 @@ import Img05x from "../../../assets/images/main/holoPets/holoPets05.webp";
 import styles from "./styles.module.scss";
 
 export default function HoloPet() {
+  const removePreventDefault = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
@@ -40,10 +44,16 @@ export default function HoloPet() {
               always with you, even when you're apart.
             </p>
             <div className={styles.holoPet_info_links}>
-              <a className={styles.holoPet_info_link} href="">
+              <a
+                onClick={(event) => removePreventDefault(event)}
+                className={styles.holoPet_info_link}
+                href="">
                 <img src={googleImg} alt="Google Play" />
               </a>
-              <a className={styles.holoPet_info_link} href="">
+              <a
+                onClick={(event) => removePreventDefault(event)}
+                className={styles.holoPet_info_link}
+                href="">
                 <img src={storeImg} alt="App Store" />
               </a>
             </div>

@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.backToTopBtn {
+  background-color: $white !important;
+}
+:global {
+  .ant-float-btn-body {
+    &:hover {
+      background-color: $white !important;
+    }
+  }
+}

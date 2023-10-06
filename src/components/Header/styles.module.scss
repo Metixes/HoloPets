@@ -2,8 +2,12 @@
 @import "../../assets/styles/mixins/mixins.scss";
 
 .container {
-    background: #FCF5F500;
-    background: radial-gradient(circle farthest-corner at center center, #FCF5F500 0%, #F9F2F8 100%);
+  background: #fcf5f500;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #fcf5f500 0%,
+    #f9f2f8 100%
+  );
 }
 
 .wrapper {
