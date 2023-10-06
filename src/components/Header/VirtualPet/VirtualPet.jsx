@@ -32,11 +32,10 @@ export default function VirtualPet() {
               Your Virtual Pet, Now in Reality.
             </h1>
             <p className={styles.virtual_info_text}>
-              Welcome to the world of Holopet, where magic and reality merge to
-              bring you the ultimate augmented reality (AR) gaming experience!
-              Say goodbye to the days of virtual pets confined to screens and
-              say hello to your new furry, feathered, or scaly friend right in
-              your living room.
+              Welcome to HoloPets, where magic and reality merge to create the
+              ultimate augmented reality (AR) gaming experience! Forget virtual
+              pets on screens; say hello to your new furry friend right in your
+              living room.
             </p>
             <div className={styles.virtual_info_links}>
               <img src={googleImg} alt="Google play" />
@@ -54,14 +53,14 @@ export default function VirtualPet() {
               width075={"1024px"}
               width1={"1024px"}
             />
-            <a
+            {/* <a
               onClick={(event) => removePreventDefault(event)}
               className={styles.virtual_app_btn}
               href="">
               <svg>
                 <use href={sprite + "#arrow-to-right"} />
               </svg>
-            </a>
+            </a> */}
           </div>
           <PictureMediaQuery
             ImgDefault={bgDefault}
